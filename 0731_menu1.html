@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{background-color: skyblue;}
+        .left{        
+            width:300px;
+/*            background-color:white;*/
+            background-color:rgb(255,255,255);
+        }
+        /* 자식선택자*/
+        .left>.logo{}
+        .left>.menu{margin-top:50px;}
+        /* 자손선택자*/
+        .left h1{
+            text-align: center;
+            padding-top:30px;
+        }
+        .left p{
+            text-align: center;
+            line-height: 5px;
+            letter-spacing: 2px;
+        }
+        .left li{
+            border-bottom: 1px solid #dddddd;
+            list-style: none;
+            text-align: center;
+            line-height: 50px;
+            font-size:14px;
+            color:#999999;
+            text-transform: uppercase;
+        }
+        .left .list1{
+            color:#cbaa5c;
+            border-top:1px solid #dddddd;
+        }
+    </style>
 </head>
 <body>
-    <div clas="left">
+    <div class="left">
         <div class="logo">
             <h1>AVADA</h1>
             <p>HOTEL ＆ RESORT</p>
         </div>
         <ul class="menu">
-            <li>home</li>
+            <li class="list1">home</li>
             <li>accomodations</li>
             <li>activities</li>
             <li>spa</li>
