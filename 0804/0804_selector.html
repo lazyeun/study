@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/*        전체선택자*/
+        *{}
+        
+/*        태그선택자*/
+        body{background:pink;}
+        
+/*        클래스선택자*/
+        .list1{border:1px solid black;}
+        
+/*       자손선택자 */
+        .list1 li{background:linen; margin-bottom:5px; list-style: none;}
+        
+/*        구조선택자*/
+        .list1 li:nth-child(7){color:tomato; border:3px solid black;} /*li 중 7번째*/
+        .list1 li:first-child{background:gold;}/*li 첫번째*/
+        .list1 li:last-child{background:black; color:white;}/*li 마지막*/
+        
+/* 블록속성을 옆으로 배치할 때 사용     
+        1. float
+        2. flex
+        3. grid
+*/
+        .box{
+                background:gold; 
+                width:500px;
+                height: 500px;
+                /*flex 배치*/
+                display: flex;
+                justify-content:center;
+                align-items: center;
+            }
+        
+        p{border:1px solid black; margin:5px;}
+        
+        
+    </style>
+</head>
+<body>
+<!--   태그 속성
+   1. inline 속성 :b, i, span, em, del, a....  -> 줄변경이 되지 않는 속성
+       width, height 등 크기지정x
+    
+   2. block 속성 : h1 , div , p , ul , ol, li -> 줄변경
+      크기지정 가능
+   -->
+    <div class="box">
+        <p>aasdf</p>
+        <p>aasdf</p>
+        <p>aasdf</p>
+        <p>aasdf</p>
+        <p>aasdf</p>       
+    </div>
+   
+    <ul class="list1">
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+    </ul>
+</body>
+</html>
