@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>box model 연습</title>
+    <style>
+        /* disply: flex*/
+        .box {
+            width: 800px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid black;
+            background: yellow;
+            display: flex;
+            
+            /* flex의 가로정렬  
+                justify-content
+                1. flex-start : 왼쪽 정렬
+                2. flex-end : 오른쪽 정렬
+                3. center : 중앙 정렬 ** 자주쓰임
+                4. space-between : 양끝 정렬 ** 자주쓰임
+                5. space-around: 내부 아이템의 마진 값이 동일
+                6. space-evenly : 동일하게 여백 맞춤
+            */
+            
+            justify-content: space-evenly;
+            
+            /* flex의 세로정렬
+                align-items
+                1. flex-start : 위쪽 정렬
+                2. flex-end : 아래쪽 정렬
+                3. center : 중앙 정렬 ** 자주쓰임
+                4. stretch : 높이값이 없을 때 아이템의 높이를 늘림
+            */
+            align-items:center; 
+        }
+
+        .box .item {
+            width: 150px;
+            height: 150px;
+            border: 5px solid red;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .box .item1 {background: ivory;}
+
+        .box .item2 {background: lightgreen;}
+
+        .box .item3 {background: lavender;}
+
+        .box .item4 {background: pink;}
+    </style>
+</head>
+
+<body>
+    <h1>박스모델 연습 - 박스를 옆으로 배치하는 방법</h1>
+    <ol>
+        <li>float : 모든 브라우저에서 보이는 css2 **웹디자인기능사 실기</li>
+        <li>flex : 익스플로러10부터 출력</li>
+        <li>grid : 익스플로러, 사파리에서 출력x, 엣지에서는 공백 출력x </li>
+    </ol>
+    <div class="box">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+    </div>
+</body>
+
+</html>

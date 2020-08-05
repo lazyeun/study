@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/*    전체선택자    */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /*  구조선택자    */
+        .box1 {
+/*            border: 1px solid red;*/
+            width:700px;
+            margin: 0 auto;
+/*
+            display:flex;
+            justify-content: center;
+            align-items: center;
+*/
+        }
+
+        .box1 p {
+/*            border:1px solid black;*/
+            margin: 10px;
+            text-align: center;
+/*            font-size:14px;*/
+            line-height: 50px;
+        }
+          .box1 .white{
+            color:white;
+        }
+        
+        .box1 .bold{            
+            font-weight: bold;
+        }
+        
+        .box1 .border{
+            border:2px solid black;
+        }
+        
+        .box1 p:nth-child(1){
+            background:red;
+        }
+        .box1 p:nth-child(2){
+            background:orange;
+        }
+        .box1 p:nth-child(3){
+            background:yellow;
+        }
+        .box1 p:nth-child(4){
+            background:green;
+        }
+        .box1 p:nth-child(5){
+            background:blue;
+        }
+        .box1 p:nth-child(6){
+            background:navy;
+        }
+        .box1 p:nth-child(7){
+            background:purple;
+        }
+        
+
+        /*        */
+        .list {}
+
+        /*        */
+        .list li:nth(5) {}
+
+        .list li:first-child {}
+
+        .list li:last-child {}
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <p class="white">빨강</p>
+        <p class="bold border">주황</p>
+        <p class="bold border">노랑</p>
+        <p class="white">초록</p>
+        <p class="white">파랑</p>
+        <p class="white">남색</p>
+        <p class="bold border">보라</p>
+    </div>
+
+    <ul class="list">
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+    </ul>
+</body>
+
+</html>

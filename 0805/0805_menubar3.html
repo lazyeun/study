@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>menubar3 연습</title>
+    <style>
+        /*        전체 스타일*/
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /*hedaer*/
+        .header {
+            width: 100%;
+        }
+
+        /*logo*/
+        .header h1 {
+            margin:10px;
+            text-align: center;
+            color: blue;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size:25px;
+        }
+
+        /*menu*/
+        .menubar {
+            background: blue;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*menu ul*/
+        .menubar .menu {
+            /*            border:2px solid black;*/
+            width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /*menu li*/
+        .menu li {
+            /*            border:1px solid red;*/
+            padding: 0 30px;
+            color: white;
+            font-weight: 100;
+            font-size: 14px;
+        }
+
+        /*menu li 구분선*/
+        .menu .border {
+            border-right: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>green</h1>
+        <nav class="menubar">
+            <ul class="menu">
+                <li class="border">그린아카데미 소개</li>
+                <li class="border">웹과정</li>
+                <li class="border">편집과정</li>
+                <li class="border">인테리어과정</li>
+                <li>사무자동화과정</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
