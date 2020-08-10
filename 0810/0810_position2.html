@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position2</title>
+    <style>
+        *{margin:0; padding:0; position:relative;}
+        .wrap{
+            width:800px;
+            height: 600px;
+            margin:0 auto;
+            background:gold;
+        }
+        .box{
+            width:100px;
+            height: 100px;
+            margin:0 auto;
+            position:absolute;
+            border:3px solid black; 
+            background:crimson;
+            font-size:30px;
+            color:white;
+        }
+        .box:nth-child(1){
+            top:0;
+            left:0;
+            z-index:10;
+        }
+        .box:nth-child(2){
+            top:50px;
+            left:50px;
+            z-index: 9;
+        }
+        .box:nth-child(3){
+            top:100px;
+            left:100px;
+            z-index: 8;
+        }
+        .box:nth-child(4){
+            top:150px;
+            left:150px;
+            z-index: 7;
+        }
+        .box:nth-child(5){
+            top:200px;
+            left:200px;
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html>

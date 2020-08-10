@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>flex exam3</title>
+    <style>
+        *{margin: 0; padding:0;}
+        
+        .icon_box{
+            background:beige;
+            width: 500px;
+            margin:0 auto;
+        }
+        .icon_box .row{
+            display: flex;
+            border-bottom:1px solid #a09962;
+        }
+        
+        .icon_box .row:last-child{
+            border:none;
+        }
+        .icon_box .item{
+            width:50%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right:1px solid #a09962;
+        }
+        
+        .icon_box .item:last-child{
+            border:none;
+        }
+        
+        .icon_box .icon{
+            text-align: center;
+            
+        }
+        .icon_box .title{
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="icon_box">
+        <div class="row">
+            <div class="item">
+                <div class="group">
+                    <div class="icon"><i class="fas fa-coffee"></i></div>
+                    <div class="title">coffee</div>
+                </div>   
+            </div>
+            <div class="item">
+                <div class="group">
+                    <div class="icon"><i class="fas fa-cocktail"></i></div>
+                    <div class="title">cocktail</div>
+                </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+            <div class="item">
+                <div class="group">
+                    <div class="icon">아이콘</div>
+                    <div class="title">키워드</div>
+                </div>   
+            </div>
+        </div>
+    </section>
+</body>
+</html>

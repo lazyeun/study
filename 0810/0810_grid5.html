@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{margin:0px; padding:0px; list-style: none; font-family: 'Roboto', sans-serif;}
+        .container{width:100%; max-width:1200px; margin:0 auto;}
+        .section5{background:#232323; padding-top:100px; padding-bottom:100px;}
+        .section5 .row{
+            height: 50px;
+            display:flex;
+            align-items: center;
+            border-bottom:1px solid #999999;
+        }
+        .section5 .date{width:30%; color:#dddddd; font-weight: 300;}
+        .section5 .work{width:70%; color:#f2f2f2; font-weight: 700;}
+        .section5 .group3{display:flex; margin-top:50px;}
+        .section5 .item{flex:1;}
+        .section5 h4{font-weight: 700; color:white;}
+        .section5 li{font-weight: 300; color:#dddddd;}
+        
+        .section6{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows:300px 300px;
+            grid-gap:1px;
+        }
+        .section6 .item{display:flex; align-items: center; justify-content: center; background:black;}
+        
+        .section7{background:red; padding-top:100px; padding-bottom:100px;}
+        .section7 .group2{display:flex;}
+        .section7 .left{flex:1; margin-right:30px;}
+        .section7 .right{flex:1;}
+        .section7 .left .row{margin-bottom:10px;}
+        .section7 .left .row:nth-child(1){display:flex;}
+        .section7 .left .row:nth-child(1) .input{flex:1;background-color:crimson; height: 30px;}
+        .section7 .left .row:nth-child(1) .input:nth-child(1){margin-right: 20px;}
+        .section7 .left .row:nth-child(2){background-color:crimson; height: 200px;}
+        .section7 .left .row:nth-child(3){background-color:white; border-radius: 2px; height: 30px;}
+        .section7 .right .row{display:flex; margin-bottom: 30px;}
+        .section7 .right .row ul{display:flex;}
+        .section7 .right .row .icon{width:50px; height: 50px; border-radius:25px; 
+            margin-right:10px; display:flex; justify-content: center; align-items:center; color:red; background:white;}
+        .section7 .right .row .addr{color:white;}
+        .section7 .right .row p{padding:5px;}
+        .section7 .right .row p:nth-child(1){font-size:13px; font-weight: 600;}
+        .section7 .right .row li{margin-right:20px; color: floralwhite; font-size:13px; font-weight: 500;}
+    </style>
+</head>
+
+<body>
+    <section class="section section5">
+        <div class="container">
+            <div class="row">
+                <div class="date">July 2015 till today</div>
+                <div class="work">Freelance Art Director at Nike</div>
+            </div>
+            <div class="row">
+                <div class="date">Sep 2014 – Dec 2014</div>
+                <div class="work">Creative Director at Shopify</div>
+            </div>
+            <div class="row">
+                <div class="date">Oct 2013 – Sep 2014</div>
+                <div class="work">Art Director at Airbnb</div>
+            </div>
+            <div class="row">
+                <div class="date">Nov 2011 – Oct 2013</div>
+                <div class="work">Design Director at Computer Arts Magazine</div>
+            </div>
+            <div class="row">
+                <div class="date">Jun 2010 – Nov 2011</div>
+                <div class="work">Senior Designer at Apple</div>
+            </div>
+        </div>
+        <div class="container group3">
+            <div class="item">
+                <h4>FOCUS ON</h4>
+                <ul>
+                    <li>UX / UI Design</li>
+                    <li>Illustration</li>
+                    <li>Web Development</li>
+                    <li>Print &amp; Editorial</li>
+                    <li>Packaging</li>
+                    <li>Branding</li>
+                    <li>Photography</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>PRESS</h4>
+                <ul>
+                    <li>Computer Arts</li>
+                    <li>Designmodo</li>
+                    <li>Behance</li>
+                    <li>Awwwards</li>
+                    <li>Techcrunch</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>AWARDS</h4>
+                <ul>
+                    <li>Cannes Lions</li>
+                    <li>European Design</li>
+                    <li>Webby</li>
+                    <li>Red Dot</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section section6">
+        <div class="item"><img src="./img/oshine-demo-logo-1.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-3.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-5.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-6.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-7.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-9.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-10.png"></div>
+        <div class="item"><img src="./img/oshine-demo-logo-12.png"></div>
+    </section>
+    <section class="section section7">
+        <div class="container group2">
+            <div class="left">
+                <div class="row">
+                    <div class="input">name</div>
+                    <div class="input">email</div>
+                </div>
+                <div class="row">2</div>
+                <div class="row">3</div>
+            </div>
+            <div class="right">
+                <div class="row">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="addr">
+                        <p>CALL ME</p>
+                        <p>123-1234-1234</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="addr">
+                        <p>MAIL ME</p>
+                        <p>abcd@aaa.com</p>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="addr">
+                        <p>VISIT ME</p>
+                        <p>45 Park Ave, Newyork, NY 100003</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>EMAIL</li>
+                        <li>TWITTER</li>
+                        <li>DRIBBLE</li>
+                        <li>BEHANCE</li>
+                        <li>INSTAGRAM</li>
+                        <li>PINTEREST</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

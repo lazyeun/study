@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>flex layout 연습</title>
+    <style>
+        /*전체css*/
+        *{ margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif; }
+        .section5{
+/*            background:#fbe8f7;*/
+        }
+        .section5 .row{
+            display: flex;
+            border-bottom: 1px solid white;
+        }
+
+        .section5 .item{
+            width:25%;
+            padding: 50px 30px;
+            background:#fbe8f7;
+            border-right: 1px solid white;
+        }
+        
+        .section5 .item:last-child{
+            border-right:none;
+        }
+        
+        .section5 .item .icon{
+            width:50px;
+            height:50px; 
+            border-radius:50px;
+            font-size:30px;
+            text-align: center;
+            color: #eee0eb;
+            background:white;
+        }
+        .section5 .item h1{
+            text-size : 18px;
+            text-align: left;
+            text-transform: uppercase;
+            color:#656164;
+            
+        }
+        .section5 .item .t{
+            text-align: left;
+            font-size:14px;
+            font-weight: 200;
+            color:#514e4e;
+        }
+    </style>
+</head>
+<body>
+<!--  
+    **html5 tag (시멘틱 태그 ; 용도에 맞는 태그를 작성하기)**
+    header : 상단
+    nav : 메뉴바 네비게이션
+    footer : 하단
+    section : 구획, 영역
+    article : 관련글
+    aside : 페이지와 관련 없는 광고
+=====================================================
+    div: division(분할:그룹) -> 단순 나누기
+    h1 : 최상단 머리글
+    h2 : 부 머리글
+    p : 단락
+    ol : 순번목록
+    ul : 비순번 목록
+    -->
+    <section class="section5">
+        <div class="row">
+            <div class="item">
+                <p class="icon"><i class="fab fa-dev"></i></p>
+                <h1>develop</h1>
+                <p class="t">web front-end develop</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="fab fa-evernote"></i></p>
+                <h1>evernote</h1>
+                <p class="t">evernote - 강력한 텍스트 에디터</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="fas fa-code"></i></p>
+                <h1>code</h1>
+                <p class="t">너도알고 나도알고 모두가 아는 html</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="fas fa-book"></i></p>
+                <h1>book</h1>
+                <p class="t">javascript 기본서 추천 받습니다</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <p class="icon"><i class="fas fa-cloud-rain"></i></p>
+                <h1>rain</h1>
+                <p class="t">비 그만 내렸으면</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="fas fa-heart"></i></p>
+                <h1>heart</h1>
+                <p class="t">하트모양입니다</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="fas fa-mug-hot"></i></p>
+                <h1>coffee</h1>
+                <p class="t">전국 얼죽아 협회 협회원1</p>
+            </div>
+            <div class="item">
+                <p class="icon"><i class="far fa-moon"></i></p>
+                <h1>lunar</h1>
+                <p class="t">lunartic</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

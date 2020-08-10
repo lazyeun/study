@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        .container{
+            width:960px;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows:300px 300px 300px;
+            grid-gap:30px;
+            border: 1px solid black;
+        }
+        .item{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-size:40px;
+            color:white;
+        }
+        .item1{
+            grid-column: span 2;
+            background-color:darksalmon;
+        }
+        .item3{
+            grid-row: span 2;
+            background-color:darkorange;
+        }
+        .item4{
+            grid-row: span 2;
+            background-color:cornflowerblue;
+        }
+        .item8{
+            grid-column: span 2;
+            background-color:bisque;
+        }
+        .item5{
+            background-color:coral;
+        }
+    </style>
+</head>
+<body>
+<!--    3*3-->
+    <div class="container">
+        <div class="item item1">item1</div>
+        <div class="item item3">item2</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item8">item3</div>
+    </div>
+
+</body>
+</html>

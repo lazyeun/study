@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블록속성 옆으로 나열시키기</title>
+    <style>
+        *{margin:0; padding:0;}
+        
+        h1{
+            background: black; 
+            color:white; 
+            line-height: 100px; 
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contain{
+            background:gold;
+            /* css3 grid system
+                display:grid  */
+            display:grid;
+            grid-template-columns:200px 200px 200px ;
+            /*
+                fr : 비율값 단위 
+                grid-template-columns에서만 사용가능
+            */
+            /* grid-template-rows: 200px 200px 200px 200px;*/
+            grid-template-rows:repeat(4,200px);/*rows의 경우는 일정한 높이값이 필요할 경우 작성, 컨텐츠의 크기에 따라 가변적임*/
+            /* grid 여백 주기*/
+            grid-gap: 30px;
+        }
+        
+        .item{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>GRID : 격자무늬, 격자판, 모눈종이</h1>
+    <div class="contain">
+<!--  젠코딩 :  div.item{$아이템들}*10-->
+   <div class="item">1아이템</div>
+   <div class="item">2아이템</div>
+   <div class="item">3아이템</div>
+   <div class="item">4아이템</div>
+   <div class="item">5아이템</div>
+   <div class="item">6아이템</div>
+   <div class="item">7아이템</div>
+   <div class="item">8아이템</div>
+   <div class="item">9아이템</div>
+   <div class="item">10아이템</div>
+    </div>
+</body>
+</html>
