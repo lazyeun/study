@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout2</title>
+    <style>
+        *{margin:0; padding:0; list-style: none; position:relative;}
+        body{background-color: burlywood;}
+        header{width:800px; margin: 0 auto;}
+        header .logo{
+            height: 80px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color:darkcyan;
+            color:white;
+        }
+        header .menu{
+            width:800px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background:black;
+            color:white;
+        }
+        header .menu li{padding:0 15px; border-right:1px solid white;}
+        header .menu li:last-child{border-right:none;}
+        
+        /* 중앙 컨텐츠 */
+        .main{
+            width:800px;
+            height: 700px;
+            margin:0 auto;
+            display:flex;
+            background:white;
+        }
+        .main .left{flex:2; background:pink;}
+        .main .right{flex:1; background:cyan; }
+        
+        footer{
+            width:800px;
+            height: 30px;
+            background:black;
+            margin:0 auto;
+        }
+        
+        /* ad */
+        .ad{
+            width:100px; 
+            height: 300px;
+            position:absolute;
+            top:150px;
+            left:calc(50% + 420px);
+            /*
+                left:50%;
+                margin-left:400px;
+            */
+            z-index: 10;
+            border:3px solid black; 
+            background:orange;
+        }
+        .ad h1{background:black; color:white;}
+    </style>
+</head>
+<body>
+    <div class="ad">
+        <h1>Quick</h1>
+    </div>
+    <header>
+        <div class="logo">LOGO</div>
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+            <li>menu7</li>
+        </ul>
+    </header>
+<!--  중간부분시작  -->
+    <div class="main">
+        <div class="left">asdf</div>
+        <div class="right">asdf</div>
+    </div>
+<!--    중간부분 끝-->
+    <footer></footer>
+
+</body>
+</html>

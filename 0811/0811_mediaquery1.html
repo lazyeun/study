@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>미디어 쿼리</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+            position: relative;
+            font-family: 'Roboto',sans-serif;
+        }
+        .btn-group{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .btn-group .btn{
+            font-weight: 300;
+            color:white;
+            text-align: center;
+        }
+        
+        .btn1{background-color:darkorange;}
+        .btn2{background-color:orange;}
+        .btn3{background-color: dodgerblue;}
+        .btn4{background-color:blue;}
+        .btn5{background-color:navy;}
+        .btn6{background-color:black;}
+        
+        .btn .icon{
+            background:rgba(255,255,255,.2);
+            width:50px;
+            height: 50px;
+            margin:10px auto;
+            border-radius: 25px;
+            font-size:25px;
+        }
+        
+        .ham-menu{
+            width:100%;
+            height: 50px;
+            
+            display:none;
+        }
+        
+        .ham-menu span{
+            display: block;
+            width:25px;
+            height: 2px;
+            position:absolute;
+            background:black;
+        }
+        
+        .ham-menu span:nth-child(1){top:16px;}
+        .ham-menu span:nth-child(2){top:22px;}
+        .ham-menu span:nth-child(3){top:28px;}
+        
+        .ham-menu .ham-title{
+            display:inline;
+            background:white;
+            margin-left:10px;
+            position:absolute;
+            left:25px;
+            top:10px;
+            font-weight: 500;
+            font-size:20px;
+        }
+        /*  1000px 이상은 데스크탑 사이즈      */
+        @media screen and (min-width:1001px){
+            .btn{
+                margin-top:50px;
+                width:150px;
+                height: 180px;
+            }
+            .icon{margin-top:30px !important;}
+            .icon i{padding-top:12px;}
+            .title{margin-top:45px;}
+        }
+        
+        /*  1000px 이하는 태블릿 사이즈       */
+        @media screen and (max-width:1000px){
+            .btn-group{
+                max-width:700px;
+                margin:50px auto;
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .btn{
+                height: 100px;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .icon{    
+                position:absolute;
+                left:50px;
+            }
+            
+            .icon i{padding-top:12px;}
+            .title{font-size:20px; position:absolute; left:180px;}
+        }
+        /*  600px 이하는 모바일 사이즈      */
+        @media screen and (max-width:600px){
+            .btn-group{
+                display:block;
+            }
+            .btn{
+                height: 50px;
+            }
+            .btn .icon{
+                background:none;
+                border-radius: 0;
+                margin-left:-20px;
+                
+            }
+            .ham-menu{display: block;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-group">
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="ham-title">Menu</span>
+        </div>
+        <div class="btn btn1">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <div class="title">Home</div>
+        </div>
+        <div class="btn btn2">
+            <div class="icon"><i class="fas fa-flask"></i></div>
+            <div class="title">Services</div>
+
+        </div>
+        <div class="btn btn3">
+            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+            <div class="title">Portfolio</div>
+        </div>
+        <div class="btn btn4">
+            <div class="icon"><i class="fas fa-bookmark"></i></div>
+            <div class="title">Blog</div>
+        </div>
+        <div class="btn btn5">
+            <div class="icon"><i class="fas fa-user-friends"></i></div>
+            <div class="title">The team</div>
+        </div>
+        <div class="btn btn6">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div class="title">Contact</div>
+        </div>
+    </div>
+</body>
+
+</html>

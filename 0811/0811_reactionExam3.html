@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형 메뉴바</title>
+    <style>
+        *{position:relative;}
+        h1{color:blue;}
+        h1 span{color:red;}
+        .ham-btn{
+            width:100px; 
+            height: 100px;
+            background:black;
+        }
+        .ham-btn span{
+            width:50px;
+            height: 10px;
+            display:block; /*inline-block , block, flex, grid, none*/
+            position:absolute;
+            background:white;
+        }
+        .ham-btn span:nth-child(1){top:30px;left:25px;}
+        .ham-btn span:nth-child(2){top:45px;left:25px;}
+        .ham-btn span:nth-child(3){top:60px;left:25px;}
+    </style>
+</head>
+<body>
+    <h1>인라인 태그 : <span>줄변경이 없는</span> 태그</h1>
+    <div class="ham-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

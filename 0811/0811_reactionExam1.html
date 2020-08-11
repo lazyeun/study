@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형디자인</title>
+    <style>
+        /*
+           선택자의 우선순위
+            전체선택자< 태그선택자 < 클래스 선택자 < #id 선택자 < !important
+        */
+        /* 전체선택자 */
+        *{position:relative; padding:0; margin:0;}
+        /* 태그선택자  */
+        h1{background:black; color:gold; text-align: center;}
+        /* 클래스 선택자 */
+        .box{
+            width:calc(100% - 200px);
+            height: 400px;
+            margin:30px auto;
+            border:3px solid black;
+        }
+        /* 미디어쿼리 - screen     */
+        /* 스크린 사이즈 최소 1500px == 스크린 너비가 1500px 이상인 경우 배경색 빨강 */
+        @media screen and (min-width:1500px){
+            body{background:pink;}
+            .box{background:red;}
+        }
+        
+        /* 스크린 사이즈 최대 700px == 스크린 너비가 700px 이하인 경우 배경색 초록    */
+        @media screen and (max-width:700px){
+            body{background:yellowgreen;}
+            .box{background:green;}
+        }
+        /* 1500 ~ 700 : 최대 1500 / 최소 700 : 보라      */
+        @media screen and (min-width:700px) and (max-width:1500px){
+            .box{background:violet;}
+        }
+    </style>
+</head>
+<body>
+    <h1>반응형 웹디자인 퍼블리셔 과정</h1>
+    <div class="box">
+        박스
+    </div>
+</body>
+</html>

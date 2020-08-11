@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형연습2</title>
+    <style>
+        *{margin:0; padding:0; position:relative;}
+        .wrap{padding:50px; border:2px solid black;}
+        .box{border: 2px solid black; padding:20px; background:white;}
+        @media screen and (min-width:1000px){
+            .wrap{display: flex; background:orange;}
+            .box{flex:1;}
+            .box1{margin-right:30px;}
+        }
+        @media screen and (max-width:999px){
+            .wrap{display:block; background:violet;}
+            .box1{margin-bottom:30px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box1">
+            미디어쿼리란? 출력장치에 따라 각각 css를 적용하게 하는 기능
+            미디어쿼리를 사용해 스크린 사이즈에 따라 박스나열이 변경되게 만들것
+        </div>
+        <div class="box box2">
+            스크린사이즈 1000 이상이면 박스는 가로로 나열되도록
+            스크린사이즈 1000 미만이면 세로로 나열되도록 만들기
+        </div>
+    </div>
+</body>
+</html>

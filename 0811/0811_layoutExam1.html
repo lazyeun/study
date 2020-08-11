@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout1</title>
+    <style>
+        /*        css reset*/
+        *{margin:0; padding:0; list-style: none; position:relative;}
+        /*        전체 컨테이너*/
+        .wrap{
+            width:800px;
+            margin:0 auto;
+        }
+        /*        헤더*/
+        header{}
+        header .logo{
+            padding-top:15px;
+            padding-bottom:30px;
+            padding-left:10px;
+            background:gray;
+        }
+        
+        header h1{color:white; }
+        
+        header .menu{
+           background:black;
+        }
+        header .menu ul{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .menu li{
+            padding-left:6px;
+            padding-right:6px;
+            padding-bottom:6px;
+            border-right: 1px solid white;
+            text-align: center;
+            color:white;
+        }
+        
+        header .menu li:last-child{
+            border:none;
+        }
+        /*        메인 섹션*/
+        section{
+            margin-top:20px;                   
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap:15px;
+        }
+        section .content{margin-bottom:20px;}
+        section .content1{grid-column: span 2}
+        section .content2{grid-row: span 2}
+        section .content3{margin-top:-20px;}
+        section .content4{margin-top:-20px;}
+        
+        section .title{
+            padding:5px;
+            background:black;
+            color:white;
+            font-size:13px;
+            font-weight: bold;
+        }
+        
+        section .article{}      
+        section .web{
+            height: 250px;            
+            background-color: blueviolet;
+        }
+        section .side{
+            height: 560px;
+            background-color:aquamarine;
+        }
+        section .html{
+            height: 265px;
+            background-color: dodgerblue;
+        }
+        section .js{
+            height: 265px;
+            background-color: dodgerblue;
+        }
+        /*        푸터*/
+        footer{
+            height: 30px;
+            background-color:black;
+        }
+        /*        퀵 aside*/
+        aside{
+            width:100px;
+            poisition:absolute;
+            top:-635px;
+            right:-820px;
+        }
+        aside .title{
+            height: 25px; 
+            padding-left:10px;
+            background:black; 
+            color:white; 
+            line-height: 25px;
+        }
+        aside .content{height: 250px; border:2px solid black; backgrond:yellowgreen;}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                    <li>menu5</li>
+                    <li>menu6</li>
+                    <li>menu7</li>
+                    <li>menu8</li>
+                    <li>menu9</li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <div class="content content1">
+                <div class="title">WEBDESIGN</div>
+                <div class="article web"></div>
+            </div>
+            <div class="content content2">
+                <div class="title">SIDE AREA</div>
+                <div class="article side"></div>
+            </div>
+            <div class="content content3">
+                <div class="title"> HTML &amp; CSS </div>
+                <div class="article html"></div>
+            </div>
+            <div class="content content4">
+                <div class="title">JAVASCRIPT &amp; JQUERY</div>
+                <div class="article js"></div>
+            </div>
+        </section>
+        <footer></footer>
+        <aside>
+            <div class="title">Quick</div>
+            <div class="content"></div>
+        </aside>
+    </div>
+</body>
+
+</html>
