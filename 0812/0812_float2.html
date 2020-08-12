@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float layout</title>
+    <style>
+        *{margin:0; padding:0;}
+        body{backgrond:gray;}
+        .header{width:calc(100% - 60px); height: 100px; margin :0 auto; background:skyblue; }
+        .section{width:calc(100% - 60px); margin :0 auto; background:white;}
+        .section .left{
+            width : 20%; 
+            height: 150px;
+            float:left;
+            background:darkgray; 
+            
+        }
+        .section ul{
+            margin-left:40px;
+        }
+        .section ul li{
+            margin-bottom:20px;
+        }
+        .section .right{
+            width : 80%; 
+            height: 500px;
+            margin-left:20%;
+            background:#dddddd;
+        }
+        .section .content{
+            width:85%;
+            margin-left:25px;
+        }
+        .section h1{
+            padding: 30px 0 10px;
+            font-size:25px;
+        }
+        .section p{
+            line-height: 25px;
+        }
+        .section .clear{clear:both;}
+        .footer{width:calc(100% - 75px); height: 50px; margin:0 auto; padding-left:15px;background:orange; border:2px solid black; line-height: 50px;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        이 부분은 웹 문서의 헤더 부분입니다
+    </div>
+    <div class="section">
+        <div class="left">
+            <ul>
+                <li>submenu</li>
+                <li>submenu</li>
+                <li>submenu</li>
+                <li>submenu</li>
+            </ul>
+        </div>
+        <div class="right">
+           <div class="content">
+                <h1>여기는 문서의 제목입니다</h1>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다1</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다2</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다3</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다4</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다5</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다6</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다7</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다8</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다9</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다10</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다11</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다12</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다13</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다14</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다16</p>
+                <p>문서내용입니다문서내용입니다문서내용입니다문서내용입니다문서내용입니다17</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+        HTML5 문서의 푸터가 들어가는 곳입니다
+    </div>
+</body>
+</html>
