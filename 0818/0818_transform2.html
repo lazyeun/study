@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .ham {
+            width: 60px;
+            height: 60px;
+            border: 1px solid red;
+        }
+
+        .ham span {
+            width: 50px;
+            height: 4px;
+            display: block;
+            background: black;
+            position: absolute;
+            top: calc(50% - 2px);
+            left: calc(50% - 25px);
+            transition:1s;
+        }
+        .ham span:nth-child(1){transform:translate(0,-12px);}
+        .ham span:nth-child(3){transform:translate(0, 12px);}
+        
+        .btn1:hover span:nth-child(1){transform:translate(0,0);}
+        .btn1:hover span:nth-child(3){transform:translate(0,0);}
+        
+        .btn2:hover span:nth-child(1){transform:translate(0,0) rotate(45deg);}
+        .btn2:hover span:nth-child(2){opacity:0;}
+        .btn2:hover span:nth-child(3){transform:translate(0,0) rotate(-45deg);}
+        
+        .btn3:hover span:nth-child(1){transform:translate(-10px,-7px) rotate(-30deg) scaleX(0.5);}
+        .btn3:hover span:nth-child(2){transform:translate(0, 0) scaleX(0.9);}
+        .btn3:hover span:nth-child(3){transform:translate(-10px,7px) rotate(30deg) scaleX(0.5);}
+        
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="ham btn1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="ham btn2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="ham btn3">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="ham btn4">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+</body>
+
+</html>
