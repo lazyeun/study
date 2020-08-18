@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>transition으로 애니메이션 효과 내기</title>
+    <style>
+        *{position:relative; margin:0; padding:0;}
+        body{background:skyblue;}
+        .btn{
+            width:400px;
+            height: 80px;
+            margin:30px auto;
+            border:2px solid navy;
+            border-radius: 80px;
+            transition:1s;
+        }
+        .btn h1{
+            position:absolute;
+            line-height: 80px;
+            color:white;
+            font-size:30px;
+            font-weight: lighter;
+            transition:0.5s;
+        }
+        .btn .t1{left:130px}
+        .btn .t2{left:0;opacity:0;}
+        
+        .btn .circle{
+            width:60px;
+            height: 60px;
+            border-radius: 50%;
+            background:navy;
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:30px;
+            font-weight: bold;
+            position:absolute;
+            top:10px; 
+            transition:0.5s;
+        }
+        .btn .circle1{left:10px;}    
+        .btn .circle2{left:0;opacity:0;}
+        /*
+         btn 마우스 오버 시 
+         1.배경색 변경
+         2.t1 투명하게 , t2 투명도0 위치값 조정
+         3. circle1 투명하게, circle2 투명도0 위치값 조정
+        */
+        .btn:hover{background:navy;}
+        .btn:hover .t1{opacity:0;}
+        .btn:hover .t2{opacity:1; left:40px;}
+        .btn:hover .circle1{opacity:0;}
+        .btn:hover .circle2{opacity:1; left:330px; background:skyblue;}
+    </style>
+</head>
+<body>
+    <div class="btn">
+       <h1 class="t1">Slide to Unlock</h1>
+       <h1 class="t2">Unlocked!</h1>
+        <div class="circle circle1"><i class="fas fa-arrow-right"></i></div>
+        <div class="circle circle2"><i class="fas fa-arrow-right"></i></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0; position:relative;}
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: column;
+            background-image:url(/0810/img/300img.jpg);
+            background-size: cover;
+            background-position:center center;
+        }
+        .main .black{
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            left:0;
+            background:rgba(0,0,0,.7);
+        }
+        .main-text{z-index: 10; color:white; font-size: 10vw;}
+        .main-text2{z-index: 10; color:white; font-size: 40px;}
+    </style>
+</head>
+<body>
+    <section class="main">
+        <div class="main-text">WEB DESIGNER</div>
+        <div class="main-text2">green academy</div>
+        <div class="black"></div>
+    </section>
+</body>
+</html>

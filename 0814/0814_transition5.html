@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative; padding:0; margin:0;}
+        body{background:black;}
+        .item{
+            border:10px solid red;
+            width:400px;
+            height: 400px;
+            margin:100px auto;
+            overflow:hidden;
+        }
+        .item .black{
+            width:100%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            left:0;
+            background:rgba(0,0,0,0.5);
+        }
+        .item span{
+            display:block;
+            position:absolute;
+            background:white;
+            transition:1s;
+        }
+        .item .span1{
+            width:5px;
+            height: 100%;
+            left:350px;
+            top:-100%;
+        }
+        .item .span2{
+            width:100%;
+            height: 5px;
+            left:-100%;
+            top:350px;
+        }
+        .item .span3{
+            width:100%;
+            height: 5px;
+            left:100%;
+            top:250px;
+        }
+        .item .span4{
+            width:5px;
+            height: 100%;
+            left:150px;
+            top:100%;
+        }
+        
+         .item:hover .span1{
+            width:5px;
+            height: 100%;
+            left:350px;
+            top:-50px;
+        }
+        .item:hover .span2{
+            width:100%;
+            height: 5px;
+            left:-45px;
+            top:350px;
+        }
+        .item:hover .span3{
+            width:100%;
+            height: 5px;
+            left:150px;
+            top:250px;
+        }
+        .item:hover .span4{
+            width:5px;
+            height: 100%;
+            left:150px;
+            top:250px;
+        }       
+        
+        
+    </style>
+</head>
+<body>
+    <div class="item">
+        <img src="img2.jpg">
+        <div class="black"></div>
+        <span class="span1">1</span>
+        <span class="span2">2</span>
+        <span class="span3">3</span>
+        <span class="span4">4</span>
+    </div>
+</body>
+</html>

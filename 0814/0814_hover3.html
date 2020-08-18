@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative; padding:0; margin:0;}
+        .btn{
+            width:400px;
+            height: 150px;
+            border-radius: 70px;
+            background:blueviolet;
+            transition:1s;
+        }
+        .btn h1{position:absolute; line-height: 150px;}
+        .btn .t1{left:30px; color:rgba(255,255,255,1); transition:1s;}
+        .btn .t2{left:0; opacity: 0; color:yellow; transition:1s;}
+        /* btn에 마우스를 올리면 btn > 배경색이 검정색으로 변경 
+           btn에 마우스를 올리면 t1 > 투명하게
+           btn에 마우스를 올리면 t2 > 투명하지 않게
+        */
+        .btn:hover{background:black;}
+        .btn:hover .t1{opacity: 0;}
+        .btn:hover .t2{opacity:1; left:80px;}
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <h1 class="t1">마우스를 올려주세요</h1>
+        <h1 class="t2">마우스가 올라갔어요</h1>
+    </div>
+</body>
+</html>

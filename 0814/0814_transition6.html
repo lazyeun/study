@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative; margin: 0; padding: 0;}
+        .section{
+            width:calc(100% - 100px); max-width: 1400px; margin:50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+        }
+        .item{}
+        .item *{transition:1s;}
+        .item img{display: block; width:100%;}
+        .item .red{
+            position:absolute; width:100%; height: 100%;
+            left:0; top:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .item .line{
+            display: block; width:50%; height: 1px; background:rgba(255,255,255,0);
+        }
+        .item .red>div{
+            width:100%; height: 25px;
+            text-align: center; overflow: hidden;
+        }
+        .item .text1 span{top:30px; text-transform: uppercase; font-size:20px; color:white; }
+        .item .text2 span{top:-30px; color:white;}
+    
+        /*마우스 올렸을때*/
+        .item:hover .red{
+            background:rgba(255,0,0,0.8);
+        }
+        .item:hover .line{
+            width:90%; background:rgba(255,255,255,1);
+        }
+        .item:hover .text1 span{top:0;}
+        .item:hover .text2 span{top:0;}
+        
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="item">
+            <img src="./img1.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img2.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <img src="./img3.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img1.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img2.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img3.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img1.jpg">
+             <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+          </div>
+        <div class="item">
+            <img src="./img2.jpg">
+            <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img3.jpg">
+             <div class="red">
+                <div class="text1">
+                    <span>design name</span>
+                </div>
+                <span class="line"></span>
+                <div class="text2">
+                    <span>brand.web.photo</span>
+                </div>
+            </div>
+          </div>
+    </section>
+</body>
+
+</html>

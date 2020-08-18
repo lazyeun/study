@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative;}
+        button{
+            width:200px; height: 200px;
+            border-radius: 50%;
+            border:none;
+            outline:none;
+            cursor:pointer;
+            /* transition : 중간과정
+                
+                줄임표현 
+                transition : background 1s 1s cubic-bezier(.61,.1,.09,1.1);
+                transition : 1s; -> duration 값은 필수
+            
+           1. transition-property: background; 속성 - all(default값)
+           2. transition-duration: 1s; 중간과정 시간 : 
+           3. transition-delay: 1s; 지연
+           4. transition-timing-function: cubic-bezier(.61,.1,.09,1.1);
+          
+                가속도 - ease(default값) , linear: 같은 속도  
+                가속도 바꾸는 사이트 : cubic-bezier
+            */
+            
+            /* transition:0.5s;*/
+            /*효과를 따로 주고 싶을 때는 쉼표로 구분 */
+            transition:border-radius 0.5s, background 1s 2s;
+        }
+        button:hover{
+            background:red; color:white;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상선택자 사용하기</h1>
+    <!-- 인라인블록속성 태그 button   -->
+    <button>왼쪽버튼</button>
+    <button>오른쪽버튼</button>
+</body>
+</html>

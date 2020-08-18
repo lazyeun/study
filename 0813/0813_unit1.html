@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>단위</title>
+    <style>
+            /*
+                vw : 브라우저 사이즈의 너비
+                vh : 브라우저 사이즈의 높이
+                ex) 100vw
+                
+                %와 다른 점: %는 부모의 너비에 따라 달라지나
+                vw/vh는 브라우저 사이즈에 따라 달라짐
+            */
+
+         .box{
+            width:50vw;
+            height: 50vw;
+            border:1px solid red;
+        }
+        .box2{
+            width:50vh;
+            height: 50vh;
+            border:1px solid blue;
+            position:absolute;
+            top:0; 
+            left:0;
+        }
+        .box3{
+            position:absolute;
+            left:0;
+            top:0;
+            background:cornsilk;
+            width:100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> 박스 </div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+</body>
+</html>
