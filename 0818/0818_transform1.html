@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            margin: 20px auto;
+            font-size: 30px;
+            border: 10px solid black;
+            background: yellow;
+        }
+        .box1{transform:scale(2) translate(100px,0);}
+        .box2{transform:scaleX(0.5);}
+        .box3{transform:scaleY(0.5);}
+        .box4{transform:rotate(40deg);}
+        .box5{transform:rotateX(45deg);}
+        .box6{transform:rotateY(45deg);}
+        .box7{transform:skewX(45deg);}
+        .box8{transform:skewY(45deg);}
+        .box9{transform:skew(45deg, 10deg)}
+        .box10{transform:translate(-100px, 100px)}
+        
+    </style>
+</head>
+
+<body>
+    <h1>변형 transform</h1>
+    <div class="box box1">크기scale</div>
+    <div class="box box2">크기x축scale</div>
+    <div class="box box3">크기y축scale</div>
+
+    <div class="box box4">회전 z축회전</div>
+    <div class="box box5">회전 x축회전</div>
+    <div class="box box6">회전 y축회전</div>
+
+    <div class="box box7">기울기 x평행사변형</div>
+    <div class="box box8">기울기 y평행사변형</div>
+    <div class="box box9">기울기(x,y)</div>
+    <div class="box box10">이동(가로, 세로)</div>
+</body>
+
+</html>

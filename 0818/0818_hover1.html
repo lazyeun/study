@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0; position: relative;}
+        .btn{font-size:35px; margin:30px;}
+        
+        .btn1{padding:15px 35px; border:10px solid black; 
+         background:transparent; cursor:pointer; color:black;transition:0.3s;}
+        .btn1:hover{
+            background:black;
+            color:white;
+        }
+        .btn2{display: inline-block; }
+        .btn2 span{display:block; transition:0.5s;}
+        .btn2 span:nth-child(1){
+            width:10px; height: 100%; background:red; 
+            position:absolute; top:0; left:0;
+        }
+        .btn2 span:nth-child(2){text-indent: 30px;}
+        .btn2:hover span:nth-child(1){width:100%;}
+        .btn2:hover span:nth-child(2){color:white;}
+    </style>
+</head>
+<body>
+    <h1>hover 선택자 연습하기</h1>
+    <div class="btn btn2">
+        <span></span>
+        <span>글자 :  오버하세요</span>
+    </div>
+    <button class="btn btn1">오버하세요</button>
+</body>
+</html>
