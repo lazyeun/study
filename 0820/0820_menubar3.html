@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>아코디언메뉴2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <style>
+        * {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background: black;
+        }
+
+        .menu {
+            width: 350px;
+            margin: 50px auto;
+        }
+
+        .menu-li {
+            color: white;
+        }
+
+        .menu-li span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #333333;
+            text-indent: 10px;
+            line-height: 40px;
+            border-bottom: 1px solid black;
+            text-shadow: 1px 1px 1px black;
+            box-shadow: inset 0 1px 1px white;
+            box-sizing: border-box;
+        }
+        .menu-li i{
+            padding-right:10px;
+        }
+        .sub {
+            display: none;
+        }
+
+        .sub-li {
+            background: #f2f2f2;
+            text-indent: 50px;
+            border-bottom: 1px solid #dddddd;
+            line-height: 50px;
+            color: #434343;
+        }
+
+        .sub-li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="menu-li"><span><i class="fas fa-user-friends"></i>Friends</span>
+            <ul class="sub">
+                <li class="sub-li">menu1</li>
+                <li class="sub-li">menu2</li>
+                <li class="sub-li">menu3</li>
+                <li class="sub-li">menu4</li>
+                <li class="sub-li">menu5</li>
+                <li class="sub-li">menu6</li>
+            </ul>
+        </li>
+        <li class="menu-li"><span><i class="fas fa-film"></i>Videos</span>
+            <ul class="sub">
+                <li class="sub-li">menu1</li>
+                <li class="sub-li">menu2</li>
+                <li class="sub-li">menu3</li>
+            </ul>
+        </li>
+        <li class="menu-li"><span><i class="fas fa-image"></i>Galleries</span>
+            <ul class="sub">
+                <li class="sub-li">menu1</li>
+                <li class="sub-li">menu2</li>
+                <li class="sub-li">menu3</li>
+                <li class="sub-li">menu4</li>
+                <li class="sub-li">menu5</li>
+            </ul>
+        </li>
+        <li class="menu-li"><span><i class="fas fa-microphone"></i>Podcasts</span>
+            <ul class="sub">
+                <li class="sub-li">menu1</li>
+                <li class="sub-li">menu2</li>
+                <li class="sub-li">menu3</li>
+                <li class="sub-li">menu4</li>
+                <li class="sub-li">menu5</li>
+                <li class="sub-li">menu6</li>
+                <li class="sub-li">menu7</li>
+            </ul>
+        </li>
+        <li class="menu-li"><span><i class="fas fa-robot"></i>Robots</span>
+            <ul class="sub">
+                <li class="sub-li">menu1</li>
+                <li class="sub-li">menu2</li>
+                <li class="sub-li">menu3</li>
+                <li class="sub-li">menu4</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".menu-li").click(function() {
+        $(this).find("span").css({
+            background: "#347ac2",
+            boxShadow: "inset 0 1px 1px black"
+        });
+        $(this).find(".sub").css({
+            display: "block"
+        });
+        $(".menu-li").not(this).find("span").css({
+            background: "#333333",
+            boxShadow: "inset 0 1px 1px white"
+        });
+        $(".menu-li").not(this).find(".sub").css({
+            display: "none"
+        });
+
+    });
+</script>

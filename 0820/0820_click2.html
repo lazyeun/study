@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>click 이벤트2</title>
+    <style>
+        *{position:relative; padding:0; margin:0; list-style: none;}
+        .container{
+            width:300px;
+            margin:30px auto;
+        }
+        .box{background-color:lavender;}
+        .item{
+            box-sizing: border-box;
+            border:1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="box">
+            <li class="item">아이템1</li>
+            <li class="item">아이템2</li>
+            <li class="item">아이템3</li>
+            <li class="item">아이템4</li>
+            <li class="item">아이템5</li>
+            <li class="item">아이템6</li>
+            <li class="item">아이템7</li>
+            <li class="item">아이템8</li>
+            <li class="item">아이템9</li>
+            <li class="item">아이템10</li>
+            <li class="item">아이템11</li>
+            <li class="item">아이템12</li>
+            <li class="item">아이템13</li>
+            <li class="item">아이템14</li>
+            <li class="item">아이템15</li>
+            <li class="item">아이템16</li>
+            <li class="item">아이템17</li>
+            <li class="item">아이템18</li>
+            <li class="item">아이템19</li>
+            <li class="item">아이템20</li>
+            <li class="item">아이템21</li>
+            <li class="item">아이템22</li>
+            <li class="item">아이템23</li>
+            <li class="item">아이템24</li>
+            <li class="item">아이템25</li>
+            <li class="item">아이템26</li>
+            <li class="item">아이템27</li>
+            <li class="item">아이템28</li>
+            <li class="item">아이템29</li>
+            <li class="item">아이템30</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".box li").click(function(){
+        $(this).css({background:"blueviolet",color:"white"});
+        $(".box li").not(this).css({background:"lavender",color:"black"});
+    });
+</script>

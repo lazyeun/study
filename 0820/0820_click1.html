@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>click 이벤트1</title>
+    <style>
+        * {position: relative;padding: 0;margin: 0;}
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:150px;
+        }
+        .box {
+            width: 100px;
+            height: 300px;
+            transition:0.5s;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box1{background:red;}
+        .box2{background:orange;}
+        .box3{background:green;}
+        .box4{background:yellow;}
+        
+        .circle{
+            width:50px;
+            height: 50px;
+            border:3px solid white;
+            border-radius:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size:26px;
+            font-weight: bold;
+            transition:0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"><div class="circle">1</div></div>
+        <div class="box box2"><div class="circle">2</div></div>
+        <div class="box box3"><div class="circle">3</div></div>
+        <div class="box box4"><div class="circle">4</div></div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".box").click(function(){
+        $(this).css({width:"200px"});
+        $(this).children(".circle").css({width:"70px",height:"70px",fontSize:"30px"});
+        $(".box").not(this).css({width:"100px"});
+        $(".box").not(this).children(".circle").css({width:"50px",height:"50px",fontSize:"26px"});
+    });
+</script>
