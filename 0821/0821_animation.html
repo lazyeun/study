@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate function 사용하기</title>
+    <style>
+        *{position:relative; margin:0; padding:0;}
+        h1{text-align: center; font-size:40px;}
+        .btn-group{
+            padding:20px 10px; 
+            display:flex;
+            flex-wrap:wrap; /* default : nowrap 아이템이 자동 줄어듬
+                                wrap : 아이템 자동 줄어듬x, 줄변경
+                            */
+        }
+        .btn{
+            width:30%; 
+            flex-grow: 1; /* flex-shrink : 0 줄어들지 않음 , 1: 자동 줄어듬(default)
+                             flex-grow: 0 늘어나지 않음(default), 1:늘어남
+                            */
+            margin-right:5px;
+        }
+        .btn:nth-child(3n){
+            margin-right:0px;
+        }
+        .img{
+            width:calc(100% - 20px);
+            margin:10px auto;
+            border:1px solid black;
+        }
+        .img img{width:calc(100% - 20px); margin:10px;}
+    </style>
+</head>
+<body>
+   <h1>jquery animation</h1>
+    <div class="btn-group">
+        <button class="btn btn1">안보임</button>
+        <button class="btn btn2">보임</button>
+        <button class="btn btn3">보였다 안보였다</button>
+        <button class="btn btn4">사라짐</button>
+        <button class="btn btn5">나타남</button>
+        <button class="btn btn6">사라졌다 나타났다</button>
+        <button class="btn btn7">올라감</button>
+        <button class="btn btn8">내려옴</button>
+        <button class="btn btn9">올라갔다 내려왔다</button>
+    </div>
+    <div class="img">
+        <img src="https://t1.daumcdn.net/liveboard/catlab/df4476dc4598433bb29710242487ed4c.JPG">
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    /*display:none <-> display:block 상태를 애니메이션으로 만들 효과*/
+    $(".btn1").click(function(){
+       $(".img").hide(); 
+    });
+    $(".btn2").click(function(){
+       $(".img").show(); 
+    });
+    $(".btn3").click(function(){
+       $(".img").toggle(); 
+    });
+    /*투명도 0.4초*/
+    $(".btn4").click(function(){
+        $(".img").fadeOut(400);
+    });
+    $(".btn5").click(function(){
+       $(".img").fadeIn(1000); 
+    });
+    $(".btn6").click(function(){
+       $(".img").fadeToggle(); 
+    });
+    /*슬라이딩*/
+    $(".btn7").click(function(){
+       $(".img").slideUp(); 
+    });
+    $(".btn8").click(function(){
+        $(".img") .slideDown();
+    });
+    $(".btn9").click(function(){
+       $(".img").slideToggle(); 
+    });
+</script>
