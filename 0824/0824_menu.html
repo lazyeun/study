@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>아코디언 메뉴</title>
+    <style>
+        *{position:relative; padding:0; margin:0; list-style: none;}
+        .menu{border: 10px solid #808080; width:200px;}
+        .menu-li{border:1px solid black; font-size:14px; line-height: 30px; color:#666666;
+                text-indent: 30px; padding-bottom:20px;}
+        .sub{background:#f2f2f2; padding-bottom:20px;padding-top:10px; display:none;}
+        
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-li">menu1
+            <ul class="sub">
+                <li class="sub-li">sub1-1</li>
+                <li class="sub-li">sub1-2</li>
+                <li class="sub-li">sub1-3</li>
+                <li class="sub-li">sub1-4</li>
+            </ul>
+        </li>
+        <li class="menu-li">menu2
+            <ul class="sub">
+                <li class="sub-li">sub2-1</li>
+                <li class="sub-li">sub2-2</li>
+            </ul>
+        </li>
+        <li class="menu-li">menu3
+            <ul class="sub">
+                <li class="sub-li">sub3-1</li>
+                <li class="sub-li">sub3-2</li>
+                <li class="sub-li">sub3-3</li>
+            </ul>
+        </li>
+        <li class="menu-li">menu4
+            <ul class="sub">
+                <li class="sub-li">sub4-1</li>
+                <li class="sub-li">sub4-2</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".menu-li").click(function(){
+       $(this).find(".sub").slideDown(500);
+       $(".menu-li").not(this).find(".sub").slideUp(500);
+    });
+</script>

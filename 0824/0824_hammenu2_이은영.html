@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>햄버거메뉴2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <style>
+        *{position: relative; margin:0; padding:0; list-style: none;}
+        body{background:#42f598; overflow-y: hidden;}
+        header{
+            width:100%;
+            height:80px;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:10;
+        }
+        header .ham-btn{
+            width:60px;
+            height: 60px;
+            position:absolute;
+            top:10px;
+            left:20px;
+        }
+        header .ham-btn span{
+            display:block;
+            width:40px;
+            height: 2px;
+            background:white;
+            border-radius: 2px;
+            position:absolute;
+            top:calc(50% - 1px);
+            left:calc(50% - 0);
+        }
+        header .bar1{transform:translate(0,-10px);}
+        header .bar2{transform:translate(0,0);}
+        header .bar3{transform:translate(0,10px);}
+        .nav{
+            width:20%;
+            height:100vh;
+            position:fixed;
+            top:0;
+            left:-500px;
+            background:black;
+            color:white;
+            transition:0.3s;
+        }
+        .nav ul{
+            margin-top:80px;
+        }
+        .nav li{
+            text-indent: 25px;
+            line-height: 50px;
+        }
+        .section1{
+            width:800px;
+            height:100vh;
+            margin:10px auto;
+        }
+        .section1 h1{text-align: center; color:white;}
+        .section1 .content{
+            width:400px;
+            margin:10px auto;
+            text-align: center;
+            color:white;
+        }
+        
+        .black{
+            width:100%;
+            height: 100vh;
+            position:absolute;
+            top:-10px;
+            left:0;
+            background:rgba(0,0,0,0);
+        }
+        
+        .bottom{
+            width:100%;
+            height:5%;
+            position:absolute;
+            right:0;
+            bottom:-100px;
+            background:black;
+            transition:0.3s;
+        }
+        .bottom .icons{
+            text-align: right;
+            font-size:26px;
+            color:white;
+            padding-right:20px;
+        }
+        
+        .bottom .icons i{
+            padding-left:20px;
+        }
+        /*  toggleClass      active-menu*/
+        
+        .active-menu{overflow: hidden;}
+        .active-menu .black{
+            background:rgba(0,0,0,0.3);
+        }
+        .active-menu .nav{
+            left:0;
+        }
+        .active-menu .bottom{
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+   <div class="black"></div>
+    <header>
+        <div class="ham-btn">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+        </div>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li>ABOUT US</li>
+            <li>WORK</li>
+            <li>CLIENTS</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+    <section class="section1">
+        <h1>Animate Border Menus</h1>
+        <p class="content">
+            Inspired by creativeDash's bounce menu
+        </p>
+    </section>
+    <div class="bottom">
+        <div class="icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-behance"></i>
+        </div>        
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(".ham-btn").click(function(){
+    $("body").toggleClass("active-menu");
+});
+</script>
