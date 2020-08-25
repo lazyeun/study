@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그라디언트 만들기</title>
+    <style>
+        *{position:relative; padding:0; margin:0;}
+        .box{
+            width:500px; height: 300px; border:10px solid black;
+            margin:20px auto;
+        }
+        .box1{background:linear-gradient(red,gold);}
+        .box2{background:linear-gradient(45deg,red,blue,gold);}
+        .box3{background:linear-gradient(90deg,#00a2ff 0%,#f0ff00 50% ,transparent 50%);}
+        .box4{
+            background-image:linear-gradient(45deg, #f6ff00 25%, #f993f0 25%, #f993f0 50%, #f6ff00 50%, #f6ff00 75%, #f993f0 75%);
+            background-size:50px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>
