@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>체크박스 버튼 만들기 2</title>
+    <style>
+        *{position:relative;}
+        .btn{
+            width:200px;
+            height:100px;
+            margin:10px;
+        }
+        
+        .btn label, .btn span{
+            display:block;
+            position:absolute;
+            transition:0.3s;
+        }
+        
+        .btn label{
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            border: 10px solid rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            border-radius: 65px;
+        }
+        .btn span{
+            width:60px;
+            height: 60px;
+            top:10px;
+            left:10px;
+            background:rgba(0,0,0,0.2);
+            border-radius: 50%;
+        }
+        
+        .range{
+            width:200px;
+            height: 10px;
+            margin:10px;
+        }
+        
+        .range label, .range span{
+            display:block;
+            position: absolute;
+            transition:0.3s;
+        }
+        
+        .range label{
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background:lavender;
+        }
+        .range span{
+            width:40px;
+            height: 40px;
+            top:-15px;
+            left:0;
+            background:blueviolet;
+            border-radius: 50%;
+        }
+        
+        #chk{display:none;}
+        
+        #chk:checked+label{
+            border:10px solid rgba(255,150,50,0.5);
+        }
+        #chk:checked+label>span{
+            left:calc(110px - 3px);
+            background:rgba(255,150,50,0.8);
+        }
+        #chk2{display:none;}
+        
+        #chk2:checked+.btn2{
+            border:10px solid yellowgreen;
+        }
+        #chk2:checked+.btn2>span{
+            left:calc(110px - 3px);
+            background:yellowgreen;
+        }
+        #rng{display:none;}
+        
+        #rng:checked+label>span{
+            left:160px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <input type="checkbox" id="chk">
+        <label for="chk"><span></span></label>
+    </div>
+    <div class="btn">
+        <input type="checkbox" id="chk2">
+        <label for="chk2" class="btn2"><span></span></label>
+    </div>
+    <div class="range">
+        <input type="checkbox" id="rng">
+        <label for="rng"><span></span></label>
+    </div>
+    
+</body>
+</html>
