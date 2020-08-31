@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position: relative;}
+        .box{
+            width:100px; height: 100px; background:red; 
+            position:absolute; top:0; left:0;
+            
+            animation:ani1 1s 0.3s infinite cubic-bezier(.08,.63,.55,.93) alternate-reverse;
+            
+            /*
+            animation-name: ani1; 적용 애니메이션 이름
+            animation-duration:1s ; 애니메이션 작동 시간
+            animation-delay: 0.3s; 지연시간
+            animation-iteration-count: infinite; 애니메이션 반복 횟수
+            animation-timing-function: cubic-bezier(.08,.63,.55,.93);애니메이션 속도
+            animation-direction: alternate-reverse;
+            */
+        }
+        
+        .box2{
+            width:100px; height: 100px;
+            position:absolute; top:100px; left:0px;
+            background:green;
+            animation:ani1 1s 5 forwards;
+            /* animation-fill-mode:forwards           */
+        }
+        
+        /*animation*/
+        @keyframes ani1{
+            0%{left:0}
+            100%{left:500px}
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

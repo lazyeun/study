@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative; margin:0; padding:0;}
+        header{width:100%; height: 100px; background:red; z-index: 10;}
+        .main{width:100%; height: 500px;}
+        .vod{min-width: 100%; min-height: 100%; position:absolute; top:0; left:0;}
+        .section1{width:100%; height: 700px; background:rgba(255,0,0,.5); z-index: 10;}
+    </style>
+</head>
+<body>
+    <header>상단</header>
+    <section class="main">
+        <video src="../0827/redshoes.mp4" class="vod" autoplay muted loop>비디오입니다</video>
+    </section>
+    <section class="section1">다른내용</section>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    //메인의 크기 : 너비 x 높이, 비디오 크기: 너비x높이
+    //
+    var main_width = $(".main").width();
+    var main_height = $(".main").height();
+    var vod_width = $(".vod").width();
+    var vod_height = $(".vod").height();
+    
+    //alert("메인의 크기 : " + main_width + "X" + main_height + ", 비디오 크기 : " + vod_width + "X" + vod_height );
+    
+    console.log("메인의 크기 : " + main_width + "X" + main_height);
+    console.log("비디오 크기 : " + vod_width + "X" + vod_height);
+    
+    //비디오 위치 값
+    //top: calc((박스 높이 - 비디오 높이) * 0.5)
+    
+    vod_top = (main_height - vod_height) * 0.5;
+    console.log(vod_top);
+    
+    $(".vod").css("top",vod_top);
+    
+</script>

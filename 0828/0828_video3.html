@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative; margin:0; padding:0;}
+        .box{
+            width:100%; height:100vh; margin:0 auto;
+            overflow: hidden;
+        }
+        .vod{position:absolute; top:0; left:0;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <video src="../0827/redshoes.mp4" class="vod" id = "vod" autoplay muted loop></video>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    box_w = $(".box").width();
+    box_h = $(".box").height();
+   // vod_w = $(".box>video").width(box_w);
+   // vod_h = $(".box>video").height(box_h);
+    
+    let vod = document.getElementById("vod");
+    
+    vod.addEventListener("loadeddata", function(e){
+        var width = this.videoWidth;
+        var height = this.videoHeight;
+        
+        console.log(width +"/" + height);
+        
+    }, false);
+</script>

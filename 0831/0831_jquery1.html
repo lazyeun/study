@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+        ul, ol, li{list-style: none;}
+        .menu{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:10;
+        }
+        
+        .menu li{
+            background:gold;
+            width:150px;
+            text-align: center;
+            padding:10px 0;
+        }
+        
+        .menu li:hover{background:black; color:white;}
+        
+        section{width:1000px; margin: 0 auto;}
+        h1{
+            padding:50px 0;
+            text-align: center;
+            background:black;
+            color:white;
+        }
+        h2{
+            text-align: center;
+            color:#333333;
+        }
+        p{
+            margin-top:5px;
+            margin-bottom:10px;
+            line-height: 30px;
+            color:#333333;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+        <li>MENU4</li>
+        <li>MENU5</li>
+    </ul>
+    <section>
+        <h1>제이쿼리를 사용하여 값 확인하기</h1>
+        <h2>[뉴스피처] "편하긴 한데" 마스크 목걸이 알고 쓰세요</h2>
+        <p>(서울=연합뉴스) 마스크에 형형색색의 스트랩을 매달아 목에 걸 수 있도록 한 '마스크 목걸이'.</p>
+        <p>코로나19 사태 장기화에 '마스크 꾸미기'가 유행하며 나타난 또 하나의 트렌드입니다.</p>
+        <p>실제 최근 인스타그램에는 '마스크 스트랩' 해시태그를 단 게시물 수가 5만 개를 훌쩍 넘는데요.</p>
+        <p>한 예능 프로그램 출연진들이 착용하고 나오며 유행에 불을 지피기도 했습니다.</p>
+        <p>이런 인기 요인은 '편리함'과 '개성' 때문이라고 하는데요.</p>
+        <p>사람들은 식당이나 카페 등 잠시라도 마스크를 벗어야 하는 곳에서 마스크를 테이블에 놓아두거나 가방에 넣곤 합니다.</p>
+        <p>그럴 경우 마스크에 음식물이 튀거나, 장소를 옮길 때마다 마스크를 가방에 넣었다 뺐다 해야 하는 불편함이 생기는데요.</p>
+        <p>목걸이를 이용하면 마스크를 몸에서 뗄 필요가 없어 훨씬 편리하고 분실 위험도 줄어듭니다.</p>
+        <p>또 다양한 디자인으로 꾸며 외관이 다소 밋밋한 마스크에 개성을 불어넣을 수도 있습니다.</p>
+        <p>하지만 마스크 목걸이가 코로나19 감염 예방 효과를 떨어뜨릴 수 있다는데요.</p>
+        <p>마스크를 올바르게 보관하는 방법에는 몇몇 의견이 있습니다.</p>
+        <p>일반적으로 일회용 봉투를 활용하는 법, 통풍이 잘되는 곳에 걸어두는 법 등이 있는데요. 그러자 음식점이나 카페를 찾는 직장인들 사이에선 스마트폰에 마스크 한쪽 고리를 걸어 밑으로 늘어뜨려 두는 아이디어도 나왔습니다.</p>
+        <p>공통점은 마스크 '안쪽 면'이 오염되지 않아야 함을 강조합니다.</p>
+        <p>하지만 마스크를 목에 걸고 있을 경우 안쪽 면이 밖으로 노출될 수밖에 없는데요.</p>
+        <p>따라서 외부 오염물질이 쉽게 묻을 수 있고, 코로나19 바이러스 주요 감염 요인인 비말 역시 예외는 아닙니다.</p>
+        <p>마스크를 벗어 목에 건 채로 대화하다 보면 비말이 튀어 안쪽 면에 묻을 수 있기 때문이죠.</p>
+        <p>양진영 식품의약품안전처 차장은 "최근 들어 많이 사용하시는데, 마스크를 줄에 걸어 목걸이로 착용할 경우 마스크 안쪽 면이 오염될 우려가 있으므로 안쪽 면이 외부로 노출되지 않도록 주의해야 한다"고 말했습니다.</p>
+        <p>김신우 경북대학교 감염내과 교수도 "마스크를 늘어뜨리는 것 자체가 쉽게 (마스크) 안쪽 면이 바깥에 노출되니까 (목걸이 사용을) 권장하기 어렵다"고 조언했습니다.</p>
+        <p>마스크를 착용하는 것이 일상화되며 새로운 유행 상품이 등장하는 요즘.</p>
+        <p>편리함과 개성 추구도 좋지만 우리가 마스크를 쓴 채 생활하는 이유를 먼저 생각해봐야 하지 않을까요.</p>
+        <p>이은정 기자 강지원 인턴기자</p>
+    </section>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+/*
+event
+click(function(){});
+mouseenter(function(){});
+mouseleave(function(){});
+
+jquery function()
+
+css("attr","value")
+css({attr1:"value1" ,attr2 : "value2", ...})
+addClass("class명")
+removeClass("class명")
+toggleClass("class명")
+height(500) : setvalue / height() : getvalue
+width(500) : setvalue / width() : getvalue
+
+animate function()
+fadeIn()
+fadeOut()
+fadeToggle()
+
+slideDown()
+slideUp()
+slideToggle()
+
+show()
+hide()
+toggle()
+
+
+출력함수
+alert()
+console.log()
+
+연산
+5+5  =  
+10-1 =
+10*5 =
+10/4 =
+10%4 =
+
+*/
+    
+//2568 * 7895 =     
+console.log("2568 * 7895 = " + 2568 * 7895 );    
+    
+//123654+4789+9632=
+console.log("123654 + 4789 + 9632 = " + (123654+4789+9632));
+    
+//윈도우 너비 x 윈도우 높이    
+var width = $(window).width();
+var height = $(window).height();
+    
+console.log("윈도우 사이즈 = " + width + " X " + height);
+
+    
+    
+    
+    
+    
+</script>

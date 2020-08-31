@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0; position:relative;}
+        ul, ol, li{list-style: none;}
+        a:link{text-decoration: none; color:black;}
+        a:visited{color:black;}
+        .menu{        
+            display:flex;
+            justify-content: center;
+            
+        }
+        .li{
+            height: 30px;
+/*            border:1px solid red;*/
+            margin:10px;
+            overflow: hidden;
+        }
+        
+        .li span{
+            display:block;
+            width:100%;
+            height: 3px;
+            background:pink;
+            position:absolute;
+            top:25px;
+            left:-100%;
+        }
+        
+        @keyframes over{
+            0%{left:-100%;}
+            100%{left:0;}
+        }
+        @keyframes out{
+            0%{left:0;}
+            100%{left:100%;}
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="li"><span></span><a href="#">MENU1</a></li>
+        <li class="li"><span></span><a href="#">MENU2</a></li>
+        <li class="li"><span></span><a href="#">MENU3</a></li>
+        <li class="li"><span></span><a href="#">MENU4</a></li>
+        <li class="li"><span></span><a href="#">MENU5</a></li>
+        <li class="li"><span></span><a href="#">MENU6</a></li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(".li").mouseenter(function(){
+   $(this).find("span").css({animation:"over 1s forwards"}); 
+});
+$(".li").mouseleave(function(){
+   $(this).find("span").css({animation:"out 0.5s forwards"}) ;
+});
+</script>

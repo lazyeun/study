@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            margin:100px auto;
+            width:30%;
+            height: 30vw;
+            background:gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    /*
+        연산자
+        + - * / %
+    */
+    //alert( "(4567 * 2) / 234 = " + (4567 * 2) / 234 );
+    
+    //css값을 세팅할때 css("속성","값")
+    $(".box").css("width","35%");
+    
+    //css값을 구하고 싶을때 css("width")
+    a = $(".box");
+    box_width = a.css("width");
+    alert("박스너비 : " + box_width);
+    
+    /*
+        width()
+        height()
+        text()
+        attr("속성","값") -> setValue / attr("속성") -> getValue
+    */
+    
+</script>

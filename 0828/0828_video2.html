@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{position:relative;}
+        .box{
+            background:red; width:500px; height: 300px;
+            position:absolute;
+            /* == 50vh - 150px*/
+            top:calc((100vh - 300px) * 0.5);
+            /* == 50% - 250px*/
+            left:calc((100% - 500px) * 0.5); 
+        }
+        .vod{
+            position: absolute;
+            left:0;
+            top:0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity:0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <video src="../0827/vid1.mp4" class="vod" autoplay muted loop></video>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    vodWidth = $(".vod").width();
+    vodHeight = $(".vod").height();
+    
+    console.log(vodWidth + " / " + vodHeight);
+    
+    console.log(250 - (vodWidth * 0.5));
+    console.log(150 - (vodWidth * 0.5));
+    
+    $(".vod").css({left:250 - (vodWidth * 0.5), top:150 - (vodHeight * 0.5)});
+    
+</script>
