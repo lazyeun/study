@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>슬라이드배너1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{position:relative; padding:0; margin:0; font-family:'Noto Sans KR', sans-serif;}
+        ul,ol,li{list-style: none;}
+        img{display:block;}
+        a:link{text-decoration: none; color:black;}
+        a:visited{color:black;}
+        header{
+            width:90px;
+            height: 100vh;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:40;
+            background:white;
+        }
+        
+        header h1{text-align: center;}
+        
+        header .ham-menu{
+            width:50px;
+            height: 50px;
+            position:absolute;
+            top:50%;
+            left:20px
+        }
+        
+        header .ham-menu>span{
+            display:block;
+            width:50px;
+            height: 2px;
+            background:black;
+        }
+        header .ham-menu>span:nth-child(1){transform: translate(0,-10px);}
+        header .ham-menu>span:nth-child(2){transform: translate(0,0);}
+        header .ham-menu>span:nth-child(3){transform: translate(0, 10px);}
+        
+        header nav{
+            width:100%;
+            height:100vh;
+        }
+        
+        header .menu{
+            width:100%;
+            position:absolute;
+            bottom:50px;
+            left:0;
+        }
+        
+        header .menu .menu-li{
+            padding:10px;
+            text-align: center;
+            
+        }
+        
+        .main{
+            width:calc(100% - 90px);
+            height: 100vh;
+            position:fixed;
+            top:0;
+            left:90px;
+            
+        }
+        .main-img{
+            width:100%;
+            height: 100%;
+        }
+        .img-group{
+            width:100%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        
+        .img-group .img{
+            width:100%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            left:0;
+            /*  background-size: cover와 비슷, 이미지 요소의 사이즈랑 다를때만 사용 가능    */
+            object-fit: cover; 
+            /*  background-position: center center와 비슷, 이미지 요소의 사이즈랑 다를때만 사용 가능     */
+            object-position: center center;
+            transform: scale(1.1);
+        }
+        /* active ::: 보여지는 이미지한테만 적용 - addClass()        */
+        .img-group .active-img{
+            transform: scale(1); transition: 5s;
+            z-index:10;
+        }
+        
+        .img-group .img:not(.img1){
+            display:none;
+        }
+        
+        .indi-group{
+            width:100%;
+            height:30px;
+            position: absolute;
+            bottom:0;
+            left:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .indi-group .indicator{
+            display:block;
+            width:15px;
+            height: 15px;
+            margin:5px;
+            background:rgba(255,255,255,0.5);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index:20;
+        }
+        
+        .indi-group .in1{background:rgba(255,255,255,1);}
+        
+        
+        .text-group{
+            width:calc(50% - 100px);
+            height: calc(100% - 700px);
+            position:absolute;
+            top:350px;
+            left:20px;
+            z-index:30;
+        }
+        
+        .text-group .txt{
+            position:absolute;
+            top:100px;
+            left:0;
+            color:rgba(255,255,255,0.9);
+            opacity:0;
+        }
+        .txt .title{padding:10px; font-size:20px;}
+        .txt .content{font-size:16px; padding:10px;}
+        
+        .text-group .txt1{
+           top:0; opacity:1;
+        }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            btn1 = $(".main .indicator");
+            img = $(".main .img");
+            txt = $(".main .txt");
+            btn1.click(function(){
+                //변수 선언
+                inx = $(this).index();
+                img_active = img.eq(inx);
+                txt_active = txt.eq(inx);
+                
+                //이미지
+                img_active.stop().fadeIn(300, function(){
+                    img_active.addClass("active-img");
+                });
+                img.not(img_active).stop().fadeOut(300, function(){
+                    img.not(img_active).removeClass("active-img");
+                });
+                
+                //인디케이터
+                $(this).css({background:"rgba(255,255,255,1)"});
+                btn1.not(this).css({background:"rgba(255,255,255,0.5)"});
+                
+                //텍스트
+                txt_active.stop().delay(400).animate({opacity:1, top:0},1000);
+                txt.not(txt_active).stop().animate({opacity:0, top:100});
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+   <header>
+        <h1>logo</h1>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+       <nav>
+            <ul class="menu">
+                <li class="menu-li"><a href="#">menu1</a></li>
+                <li class="menu-li"><a href="#">menu2</a></li>
+                <li class="menu-li"><a href="#">menu3</a></li>
+           </ul>
+       </nav>
+   </header>
+    <section class="main">
+        <div class="main-img">
+            <div class="img-group">
+                <img src="img/0.jpg" class="img img1">
+                <img src="img/1.jpg" class="img img2">
+                <img src="img/2.jpg" class="img img3">
+                <img src="img/3.jpg" class="img img4">
+                <img src="img/4.jpg" class="img img5">
+                <img src="img/5.jpg" class="img img6">
+                <img src="img/6.jpg" class="img img7">
+                <img src="img/7.jpg" class="img img8">
+            </div>
+            <div class="indi-group">
+                <span class="indicator in1"></span>
+                <span class="indicator in2"></span>
+                <span class="indicator in3"></span>
+                <span class="indicator in4"></span>
+                <span class="indicator in5"></span>
+                <span class="indicator in6"></span>
+                <span class="indicator in7"></span>
+                <span class="indicator in8"></span>
+            </div>
+            <div class="text-group">
+                <div class="txt txt1">
+                    <h2 class="title">ROSE</h2>
+                    <p class="content">꽃의 색깔은 흔히 흰색 · 노란색 · 오렌지색 · 분홍색 · 붉은색으로 다양하고 아름다우며 좋은 향기가 난다.</p>
+                </div>
+                <div class="txt txt2">
+                    <h2 class="title">CHERRYBLOSSOM1</h2>
+                    <p class="content">꽃은 4∼5월에 분홍색 또는 흰색으로 피며 2∼5개가 산방상(揀房狀) 또는 총상(總狀)으로 달린다. 꽃자루에 포(苞)가 있으며 작은꽃자루와 꽃받침통 및 암술대에는 털이 없다. 열매는 둥글고 6∼7월에 적색에서 흑색으로 익으며 버찌라고 한다.</p>
+                </div>
+                <div class="txt txt3">
+                    <h2 class="title">LAVENDER1</h2>
+                    <p class="content">꽃은 6∼9월에 연한 보라색이나 흰색으로 피고 잎이 달리지 않은 긴 꽃대 끝에 수상꽃차례를 이루며 드문드문 달린다. 꽃·잎·줄기를 덮고 있는 털들 사이에 향기가 나오는 기름샘이 있다. 물이 잘 빠지는 모래땅에 약간의 자갈이 섞인 곳에서 잘 자라고 너무 비옥하지 않은 땅이 좋다. 햇빛을 잘 받는 남향과 습하지 않은 곳에서 잘 자란다.</p>
+                </div>
+                <div class="txt txt4">
+                    <h2 class="title">LAVENDER2</h2>
+                    <p class="content">꽃은 6∼9월에 연한 보라색이나 흰색으로 피고 잎이 달리지 않은 긴 꽃대 끝에 수상꽃차례를 이루며 드문드문 달린다. 꽃·잎·줄기를 덮고 있는 털들 사이에 향기가 나오는 기름샘이 있다. 물이 잘 빠지는 모래땅에 약간의 자갈이 섞인 곳에서 잘 자라고 너무 비옥하지 않은 땅이 좋다. 햇빛을 잘 받는 남향과 습하지 않은 곳에서 잘 자란다.</p>
+                </div>
+                <div class="txt txt5">
+                    <h2 class="title">SUNFLOWER</h2>
+                    <p class="content">향일화(向日花)·산자연·조일화(朝日花)라고도 한다. 아무데서나 잘 자라지만, 특히 양지바른 곳에서 잘 자란다. 중앙아메리카 원산이며 널리 심고 있다. 높이 2m 내외로 자라고 억센 털이 있다. 잎은 어긋나고 잎자루가 길며 심장형 달걀 모양이고 가장자리에 톱니가 있다.</p>
+                </div>
+                <div class="txt txt6">
+                    <h2 class="title">CHERRYBLOSSOM2</h2>
+                    <p class="content">꽃은 4∼5월에 분홍색 또는 흰색으로 피며 2∼5개가 산방상(揀房狀) 또는 총상(總狀)으로 달린다. 꽃자루에 포(苞)가 있으며 작은꽃자루와 꽃받침통 및 암술대에는 털이 없다. 열매는 둥글고 6∼7월에 적색에서 흑색으로 익으며 버찌라고 한다.</p>
+                </div>
+                <div class="txt txt7">
+                    <h2 class="title">WILDFLOWER</h2>
+                    <p class="content">같은말로 '야화'라고 하며, 우리말로는 '들꽃'이라 부른다. 2012년 현재 보고되어있는 국내 야생화의 수는 205과 1,158속 4,939종이다. 일반인들이 이해하기 쉽게 꽃이 피는 시기에 따라 계절별로 분류하는데, 이밖에도 서식지에 따라 고산식물, 습지식물로 구분하거나 용도에 따라 관상용, 약용, 밀원 등으로 구분하는 경우도 있다. 우리나라 야생화 중에서 비비추 등은 해외에서도 인기있는 품종으로 알려져 있다.</p>
+                </div>
+                <div class="txt txt8">
+                    <h2 class="title">CHERRYBLOSSOM3</h2>
+                    <p class="content">꽃은 4∼5월에 분홍색 또는 흰색으로 피며 2∼5개가 산방상(揀房狀) 또는 총상(總狀)으로 달린다. 꽃자루에 포(苞)가 있으며 작은꽃자루와 꽃받침통 및 암술대에는 털이 없다. 열매는 둥글고 6∼7월에 적색에서 흑색으로 익으며 버찌라고 한다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
