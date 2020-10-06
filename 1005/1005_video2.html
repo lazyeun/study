@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video 화면 사이즈 만큼</title>
+    <style>
+        *{padding:0; margin:0; position:relative;}
+        .frame{width:100%; height:100vh; overflow: hidden;}
+    </style>
+</head>
+<body>
+    <section class="section1 frame">
+<!--        <video class="vod" src="video/Panth%C3%A8re%20de%20Cartier_1080p.mp4" autoplay muted loop></video>-->
+    </section>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+/*
+비디오사이즈 
+1920 * 1080
+*/
+video1_w = 1920;
+video1_h = 1080;
+
+$(document).ready(function(){
+    video_size();
+});
+$(window).resize(function(){
+   video_size(); 
+});
+function video_size(){
+    //윈도우 사이즈
+    frame_w = $(window).width();  //보여질 너비 
+    frame_h = $(window).height();   //보여질 높이
+
+    console.log("win_w : " + frame_w + " win_h : " + frame_h);
+
+    // video2_w : video1_h = win_w : (새로운 높이)
+    // video2_w : video1_h = (새로운 너비) : win_h
+    new_width = video1_w * frame_h / video1_h;
+    new_height = video1_h * frame_w / video1_w;
+
+    console.log("새로운 너비 : " + new_width + " 새로운 높이 : " + new_height );
+
+    if(frame_w - new_width > 0){
+        $(".vod").css({width:frame_w, top:(frame_h * 0.5)-(new_height * 0.5)});
+    }else if(frame_h - new_height >0){
+        $(".vod").css({height:frame_h, left:(frame_w * 0.5)-(new_width * 0.5)});
+    }
+}
+</script>

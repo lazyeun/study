@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <style>
+        *{padding:0; margin:0; position:relative;}
+        .section{width:100%; height:100vh;}
+        .vod_box{border: 5px solid red; overflow: ;}
+        .section1 .vod_box{width:100%; height:100vh;}
+        .section2, .section3{display:flex; align-items: center; justify-content: center;}
+        .section2 .vod_box, .section3 .vod_box{width:700px; height:400px;}
+        video{position:absolute;}
+        .vod2, .vod3{opacity: 0.4;}
+    </style>
+</head>
+<body>
+    <section class="section section1">
+        <div class="vod_box"></div>
+    </section>
+    <section class="section section2">
+<!--
+        <div class="vod_box">
+            <video class="vod2" src="video/Panth%C3%A8re%20de%20Cartier_1080p.mp4" muted autoplay loop></video>
+        </div>
+-->
+    </section>
+    <section class="section section3">
+<!--
+        <div class="vod_box">
+            <video class="vod3" src="video/vid2.mp4" muted autoplay loop></video>
+        </div>
+-->
+    </section>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+var frame_w = 700;
+var frame_h = 400;
+
+//section2
+var vod_w = 1920;
+var vod_h = 1080;
+
+//section3
+var vod3_w = 480;
+var vod3_h = 476;
+    
+///top ,left 위치 맞추기
+//비디오 높이, 너비가 프레임보다 더 큰 경우
+/*
+    프레임 높이 < video_height && 프레임 너비 < 비디오 너비
+    위치값 : 프레임 *0.5 - 비디오 사이즈 * 0.5
+*/
+$(".vod2").css({top: frame_h * 0.5 - vod_h * 0.5, left:700 * 0.5 - vod_w *0.5});
+
+//사이즈가 강제로 늘어난 경우
+/*
+기존 너비 : 기존 높이 = 700 : 새로운 높이
+기존 높이 * 700 = 기존너비 * 새로운 높이
+새로운 높이 = 기존 높이 * 700 / 기존너비
+*/
+var new_h = (vod3_h * 700) / vod3_w;
+console.log(new_h);
+
+$(".vod3").css({width:700, top:400*0.5 - new_h * 0.5});
+</script>

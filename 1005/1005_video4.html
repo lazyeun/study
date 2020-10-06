@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video 마우스 오버 시 플레이</title>
+    <style>
+        *{padding:0; margin:0; position:relative;}
+        .section{width:100%; height:100vh; display:flex;}
+        .item{width:50%; height:100vh; overflow: hidden;}
+    </style>
+</head>
+<body>
+    <section class="section section1">
+<!--
+        <div class="item">
+            <video id="v0" src="video/typo.mp4" autoplay="false" muted></video>
+        </div>
+        <div class="item">
+            <video id="v1" src="video/typo2.mp4" autoplay="false" muted></video>
+        </div>
+-->
+    </section>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".section1 .item").mouseenter(function(){
+       item_num = $(this).index();
+       on_name = "v" + item_num;
+        document.getElementById(on_name).currentTime = 0;
+        document.getElementById(on_name).play();
+    });
+    
+    $(".section1 .item").mouseleave(function(){
+       item_num = $(this).index();
+       off_name = "v" + item_num;
+        document.getElementById(off_name).pause();
+    });
+</script>
